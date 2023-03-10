@@ -1,0 +1,4 @@
+# python=3.8
+Flask==2.2.3
+tensorflow==2.10
+pillow==9.4.0
