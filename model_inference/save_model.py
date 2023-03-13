@@ -3,6 +3,7 @@ import tensorflow_hub as hub
 
 if __name__ == "__main__":
     hub_url ="https://tfhub.dev/google/tf2-preview/mobilenet_v2/classification/2"
+    tf.keras.utils.get_file('./model/ImageNetLabels.txt','https://storage.googleapis.com/download.tensorflow.org/data/ImageNetLabels.txt')
     IMAGE_SHAPE = (224, 224)
     mobilenet_v2 = tf.keras.Sequential([
         hub.KerasLayer(hub_url, input_shape=IMAGE_SHAPE+(3,))
