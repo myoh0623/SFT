@@ -9,5 +9,5 @@ if __name__ == "__main__":
     ])
     model_path = './model'
     mobilenet_v2.save(model_path)
-    tf.keras.utils.get_file('./model/ImageNetLabels.txt','https://storage.googleapis.com/download.tensorflow.org/data/ImageNetLabels.txt')
+    # tf.keras.utils.get_file('./model/ImageNetLabels.txt','https://storage.googleapis.com/download.tensorflow.org/data/ImageNetLabels.txt')
     # new_model = tf.keras.models.load_model('saved_model/my_model')
