@@ -1,0 +1,17 @@
+version: '3'
+services:
+  flask_app:
+    image: myoh0623/flask_model_inference:0.3
+    restart: always
+    networks:
+      - net3
+  streamlit:
+    image: myoh0623/streamlit_front:0.3
+    ports:
+      - "8501:8501"
+    restart: always
+    networks:
+      - net3
+networks:
+  net3:
+    driver: bridge
