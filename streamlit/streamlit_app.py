@@ -21,6 +21,7 @@ if __name__ == "__main__":
             url = f'http://{address}:5000/predict' #localhost = 127.0.0.1
             data = {"image_data" : encoded}
             response = requests.post(url, data = data)
+            print(response)
             st.write("분석 결과 : ", response.json()["class"])
     except:
         st.write("실패하였습니다.")
